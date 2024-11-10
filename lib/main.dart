@@ -32,6 +32,8 @@ class MyApp extends StatelessWidget {
                   ),
                   child: Text('Elevated Button'),
                 ),
+                SizedBox(height: 5),
+                Text('Elevated Button', style: TextStyle(fontSize: 16)), // Nombre del botón
                 SizedBox(height: 20),
 
                 // Botón TextButton (Botón de enlace)
@@ -45,6 +47,8 @@ class MyApp extends StatelessWidget {
                   ),
                   child: Text('Text Button'),
                 ),
+                SizedBox(height: 5),
+                Text('Text Button', style: TextStyle(fontSize: 16)), // Nombre del botón
                 SizedBox(height: 20),
 
                 // Botón OutlinedButton (Botón con borde)
@@ -59,6 +63,8 @@ class MyApp extends StatelessWidget {
                   ),
                   child: Text('Outlined Button'),
                 ),
+                SizedBox(height: 5),
+                Text('Outlined Button', style: TextStyle(fontSize: 16)), // Nombre del botón
                 SizedBox(height: 20),
 
                 // Botón IconButton (Botón con icono)
@@ -69,6 +75,8 @@ class MyApp extends StatelessWidget {
                   icon: Icon(Icons.favorite, color: Colors.red),
                   iconSize: 40,
                 ),
+                SizedBox(height: 5),
+                Text('Icon Button', style: TextStyle(fontSize: 16)), // Nombre del botón
                 SizedBox(height: 20),
               ],
             ),
@@ -88,6 +96,9 @@ class MyApp extends StatelessWidget {
                   icon: Icon(Icons.home, color: Colors.blue),
                   iconSize: 30,
                 ),
+                SizedBox(height: 5),
+                Text('Inicio', style: TextStyle(fontSize: 16)), // Nombre del botón
+
                 // Botón en el pie de página con ícono de búsqueda
                 IconButton(
                   onPressed: () {
@@ -96,6 +107,9 @@ class MyApp extends StatelessWidget {
                   icon: Icon(Icons.search, color: Colors.green),
                   iconSize: 30,
                 ),
+                SizedBox(height: 5),
+                Text('Búsqueda', style: TextStyle(fontSize: 16)), // Nombre del botón
+
                 // Botón en el pie de página con ícono de configuración
                 IconButton(
                   onPressed: () {
@@ -104,6 +118,8 @@ class MyApp extends StatelessWidget {
                   icon: Icon(Icons.settings, color: Colors.purple),
                   iconSize: 30,
                 ),
+                SizedBox(height: 5),
+                Text('Configuración', style: TextStyle(fontSize: 16)), // Nombre del botón
               ],
             ),
           ),
