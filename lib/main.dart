@@ -13,117 +13,129 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Ejemplo de Botones'),
         ),
-        body: Center( // Aquí centramos el contenido
+        body: Center(
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,  // Centrado verticalmente
-              crossAxisAlignment: CrossAxisAlignment.center, // Centrado horizontalmente
+              mainAxisAlignment: MainAxisAlignment.center, 
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                // Botón ElevatedButton (Botón de acción principal)
+           
                 ElevatedButton(
                   onPressed: () {
-                    print("Elevated Button Pressed");
+                    print("Guardar Pressed");
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue, // Fondo azul
-                    foregroundColor: Colors.white, // Color del texto
+                    backgroundColor: Colors.blue,
+                    foregroundColor: Colors.white,
                     padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                   ),
-                  child: Text('Elevated Button'),
+                  child: Text('Guardar'),
                 ),
                 SizedBox(height: 5),
-                Text('Elevated Button', style: TextStyle(fontSize: 16)), // Nombre del botón
+                Text('Guardar', style: TextStyle(fontSize: 16)),
                 SizedBox(height: 20),
 
-                // Botón TextButton (Botón de enlace)
+        
                 TextButton(
                   onPressed: () {
-                    print("Text Button Pressed");
+                    print("Cancelar Pressed");
                   },
                   style: TextButton.styleFrom(
-                    foregroundColor: Colors.green, // Color del texto
+                    foregroundColor: Colors.green,
                     padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                   ),
-                  child: Text('Text Button'),
+                  child: Text('Cancelar'),
                 ),
                 SizedBox(height: 5),
-                Text('Text Button', style: TextStyle(fontSize: 16)), // Nombre del botón
+                Text('Cancelar', style: TextStyle(fontSize: 16)),
                 SizedBox(height: 20),
 
-                // Botón OutlinedButton (Botón con borde)
+               
                 OutlinedButton(
                   onPressed: () {
-                    print("Outlined Button Pressed");
+                    print("Enviar Pressed");
                   },
                   style: OutlinedButton.styleFrom(
-                    foregroundColor: Colors.purple, // Color del texto
-                    side: BorderSide(color: Colors.purple), // Color del borde
+                    foregroundColor: Colors.purple,
+                    side: BorderSide(color: Colors.purple),
                     padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                   ),
-                  child: Text('Outlined Button'),
+                  child: Text('Enviar'),
                 ),
                 SizedBox(height: 5),
-                Text('Outlined Button', style: TextStyle(fontSize: 16)), // Nombre del botón
+                Text('Enviar', style: TextStyle(fontSize: 16)),
                 SizedBox(height: 20),
 
-                // Botón IconButton (Botón con icono)
+               
                 IconButton(
                   onPressed: () {
-                    print("Icon Button Pressed");
+                    print("Like Pressed");
                   },
-                  icon: Icon(Icons.favorite, color: Colors.red),
+                  icon: Icon(Icons.thumb_up, color: Colors.red),
                   iconSize: 40,
                 ),
                 SizedBox(height: 5),
-                Text('Icon Button', style: TextStyle(fontSize: 16)), // Nombre del botón
+                Text('Like', style: TextStyle(fontSize: 16)),
                 SizedBox(height: 20),
               ],
             ),
           ),
         ),
         bottomNavigationBar: BottomAppBar(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                // Botón en el pie de página con ícono de inicio
-                IconButton(
-                  onPressed: () {
-                    print("Pie de página: Ícono Inicio Pressed");
-                  },
-                  icon: Icon(Icons.home, color: Colors.blue),
-                  iconSize: 30,
-                ),
-                SizedBox(height: 5),
-                Text('Inicio', style: TextStyle(fontSize: 16)), // Nombre del botón
+          shape: CircularNotchedRectangle(),
+          notchMargin: 8.0,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              
+              IconButton(
+                onPressed: () {
+                  print("Inicio Pressed");
+                },
+                icon: Icon(Icons.home, color: Colors.blue),
+                iconSize: 30,
+              ),
 
-                // Botón en el pie de página con ícono de búsqueda
-                IconButton(
-                  onPressed: () {
-                    print("Pie de página: Ícono Búsqueda Pressed");
-                  },
-                  icon: Icon(Icons.search, color: Colors.green),
-                  iconSize: 30,
-                ),
-                SizedBox(height: 5),
-                Text('Búsqueda', style: TextStyle(fontSize: 16)), // Nombre del botón
+              
+              IconButton(
+                onPressed: () {
+                  print("Búsqueda Pressed");
+                },
+                icon: Icon(Icons.search, color: Colors.green),
+                iconSize: 30,
+              ),
 
-                // Botón en el pie de página con ícono de configuración
-                IconButton(
-                  onPressed: () {
-                    print("Pie de página: Ícono Configuración Pressed");
-                  },
-                  icon: Icon(Icons.settings, color: Colors.purple),
-                  iconSize: 30,
-                ),
-                SizedBox(height: 5),
-                Text('Configuración', style: TextStyle(fontSize: 16)), // Nombre del botón
-              ],
-            ),
+              
+              SizedBox(width: 40),
+
+              
+              IconButton(
+                onPressed: () {
+                  print("Notificaciones Pressed");
+                },
+                icon: Icon(Icons.notifications, color: Colors.red),
+                iconSize: 30,
+              ),
+
+              
+              IconButton(
+                onPressed: () {
+                  print("Configuración Pressed");
+                },
+                icon: Icon(Icons.settings, color: Colors.purple),
+                iconSize: 30,
+              ),
+            ],
           ),
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            print("Botón Flotante Pressed");
+          },
+          child: Icon(Icons.add),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       ),
     );
   }
